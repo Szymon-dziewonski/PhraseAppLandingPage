@@ -1,0 +1,36 @@
+.getting {
+  margin-bottom: 100px;
+
+  .h2 .material-icons {
+    margin-right: 10px;
+  }
+}
+
+.getting__code {
+  display: inline;
+  font-family: $font2;
+  font-size: $fontSmaller;
+  padding: 8px 5px;
+  background-color: #f7f7f7;
+  line-height: 1em;
+}
+
+.getting__container {
+  padding-left: 35px;
+  margin-bottom: 30px;
+  color: $colorDark;
+}
+
+.getting__text {
+  padding-bottom: 20px;
+
+  &,
+  &-code {
+    font-size: $fontBig;
+    line-height: 1.4em;
+  }
+
+  &-code {
+    padding-bottom: 12px;
+  }
+}

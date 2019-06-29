@@ -1,5 +1,3 @@
-@import 'sections/footer';
-
 html, body {
   height: 100%;
   position: relative;
@@ -19,3 +17,6 @@ html {
 body {
   font-size: $fontMedium;
 }
+
+@import 'sections/footer';
+@import 'sections/gettingStarted';

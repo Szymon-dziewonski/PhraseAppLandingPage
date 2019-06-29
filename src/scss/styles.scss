@@ -1,8 +1,21 @@
-body {
-  font-size: 16px;
+@import 'sections/footer';
+
+html, body {
+  height: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
 }
 
 html {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: $font1;
   font-size: 10px;
+  color: $colorDarker;
+}
+
+body {
+  font-size: $fontMedium;
 }

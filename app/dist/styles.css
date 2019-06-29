@@ -2250,12 +2250,58 @@ table {
   }
 }
 
-body {
-  font-size: 16px;
+.footer_header {
+  padding-bottom: 10px;
+}
+
+.footer__link {
+  color: #565656;
+  line-height: 1.5em;
+  margin: 3px 0;
+}
+
+html, body {
+  height: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
 }
 
 html {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 10px;
+  color: #242424;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.h2 {
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 1.25em;
+}
+
+.bd-t {
+  border-top: 1px solid #efefef;
+}
+
+.pv-10 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.pv-30 {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 

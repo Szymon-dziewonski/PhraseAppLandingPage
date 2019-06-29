@@ -1,0 +1,24 @@
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.h2 {
+  font-weight: 600;
+  font-size: $fontBig;
+  line-height: 1.25em;
+}
+
+.bd-t {
+  border-top: 1px solid $colorBorder;
+}
+
+.pv-10 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.pv-30 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}

@@ -1,0 +1,24 @@
+{
+  "license"        : "MIT",
+  "scripts"        : {
+    "dev" : "yarn run webpack --mode development --w",
+    "prod": "yarn run webpack --mode production"
+  },
+  "dependencies"   : {
+    "bootstrap"              : "4.3.1",
+    "copy-webpack-plugin"    : "^5.0.3",
+    "css-loader"             : "^2.1.1",
+    "file-loader"            : "^3.0.1",
+    "loader"                 : "^2.1.1",
+    "mini-css-extract-plugin": "^0.6.0",
+    "reset-css"              : "^4.0.1",
+    "sass-loader"            : "^7.1.0",
+    "url-loader"             : "^1.1.2"
+  },
+  "devDependencies": {
+    "node-sass"  : "^4.11.0",
+    "scss-loader": "^0.0.1",
+    "webpack"    : "^4.30.0",
+    "webpack-cli": "^3.3.0"
+  }
+}

@@ -1,7 +1,9 @@
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const HtmlWebpackPlugin    = require('html-webpack-plugin')
+const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 
-const path = require('path');
-const ROOT = path.resolve(__dirname, 'src');
+const path = require('path')
+const ROOT = path.resolve(__dirname, 'src')
 
 module.exports = {
   context: ROOT,
@@ -15,9 +17,11 @@ module.exports = {
             loader: MiniCssExtractPlugin.loader
           },
           'css-loader',
-          //{loader: 'css-loader', options: {url: false}},
           'sass-loader'
         ]
+      }, {
+        test: /\.(html)$/,
+        use : ['html-loader']
       }, {
         type   : 'javascript/auto',
         test   : /\.(jpg|png|gif|svg|json)$/,
@@ -36,10 +40,15 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: 'styles.css'
-    })
+    }),
+    new HtmlWebpackPlugin({
+      template: 'index.ejs',
+      hash    : true
+    }),
+    new CleanWebpackPlugin()
   ],
   output : {
     filename: '[name].js',
-    path    : path.resolve(__dirname, 'app', 'dist')
+    path    : path.resolve(__dirname, 'dist')
   }
-};
+}

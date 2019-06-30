@@ -7,7 +7,7 @@ const ROOT = path.resolve(__dirname, 'src');
 
 module.exports = {
   context: ROOT,
-  entry  : ['./application.scss', './application.js'],
+  entry  : ['./application.scss', './application.mjs'],
   module : {
     rules: [
       {

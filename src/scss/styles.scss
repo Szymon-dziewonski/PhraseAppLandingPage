@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 html, body {
   height: 100%;
   position: relative;
@@ -12,11 +18,29 @@ html {
   font-family: $font1;
   font-size: 10px;
   color: $colorDarker;
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
 }
 
 body {
   font-size: $fontMedium;
 }
 
-@import 'sections/footer';
+a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+
+  &:not(.no-animation) {
+    transition: .1s transform ease-in-out;
+
+    &:hover, &:active {
+      transform: scale(1.03);
+    }
+  }
+}
+
+@import 'tab-container';
+@import 'sections/header';
 @import 'sections/gettingStarted';
+@import 'sections/footer';

@@ -1,7 +1,7 @@
 /* VARIABLES */
 $breakpointSm: 576px;
 $breakpointMd: 767px;
-$breakpointLg: 1280px;
+$breakpointLg: 1024px;
 $breakpointXl: 1441px;
 
 $colorLight: #fff;
@@ -13,7 +13,7 @@ $colorSecondary: #51e05d;
 $colorBorder: #efefef;
 
 $fontSmaller: 1.4rem;
-$fontSmall: 1.5em;
+$fontSmall: 1.5rem;
 $fontMedium: 1.6rem;
 $fontBig: 2rem;
 $fontLarge: 2.4rem;
@@ -21,3 +21,10 @@ $fontHuge: 4rem;
 
 $font1: 'Source Sans Pro', sans-serif;
 $font2: 'Roboto Mono', monospace;
+
+$borderRadiusMedium: 4px;
+$borderRadiusBig: 8px;
+
+$boxShadowMedium: 0 2px 7px rgba(0,0,0,.13);
+$boxShadowBig: 0 4px 10px rgba(0,0,0,.16);
+

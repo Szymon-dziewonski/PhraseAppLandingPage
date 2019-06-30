@@ -5,8 +5,20 @@
     <title>PhraseApp - Landing page</title>
 
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <!--<link rel="icon" type="image/x-icon" href="favicon.ico">-->
+    <meta property="fb:app_id" content="SOME_FB_ID" />
+    <meta property="og:title" content="PhraseApp - Landing page"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:description"
+          content="Landing page of PhraseApp - tool allowing you to manage translation and localization of your`s app texts!"/>
+    <meta property="og:image" content="https://picsum.photos/id/558/200/200"/>
+    <meta property="og:image:width" content="200"/>
+    <meta property="og:image:height" content="200"/>
+    <meta property="og:url" content="https://www.phraseapp.com/‎"/>
+    <meta property="og:locale" content="en_GB"/>
+    <meta property="og:locale:alternate" content="fr_FR"/>
+
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
@@ -14,6 +26,28 @@
 <%= require('./templates/header.tpl.html') %>
 <%= require('./templates/getting-started.tpl.html') %>
 <%= require('./templates/footer.tpl.html') %>
+
+<script type="application/ld+json">
+    {
+        "@context"   : "http://schema.org",
+        "@type"      : "Organization",
+        "name"       : "PhraseApp",
+        "description": "Your facourite translation tool",
+        "logo"       : "https://picsum.photos/id/558/200/200",
+        "url"        : "https://www.phraseapp.com/",
+        "sameAs"     : [
+            "https://www.facebook.com/phraseapp/",
+            "https://twitter.com/phraseapp"
+        ]
+    }
+</script>
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type"   : "WebSite",
+        "url"     : "https://www.phraseapp.com/"
+    }
+</script>
 
 </body>
 </html>

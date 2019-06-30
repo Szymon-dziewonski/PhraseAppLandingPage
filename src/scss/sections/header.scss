@@ -1,0 +1,91 @@
+.header {
+  padding-bottom: 80px;
+  min-height: 100vh;
+  color: $colorLight;
+  background-color: $colorPrimary;
+}
+
+.header-nav {
+  margin-bottom: 60px;
+  font-weight: 700;
+}
+
+.header-nav__logo {
+  height: 30px;
+}
+
+.header-nav__link {
+  padding: 10px;
+
+  @media all and (min-width: $breakpointSm) {
+    padding: 10px 15px;
+  }
+}
+
+.header-nav__link-icon {
+  vertical-align: middle;
+  font-size: 1.125em;
+  font-weight: normal;
+}
+
+.code-example {
+  margin: 0 auto 60px;
+  max-width: 580px;
+  background-color: $colorDarker;
+  border-radius: $borderRadiusBig;
+  box-shadow: $boxShadowBig;
+
+  .tab-container__content {
+    padding: 0 15px 15px;
+    border-bottom: 1px solid rgba(173, 173, 173, .24);
+  }
+}
+
+.code-example__header {
+  padding: 15px;
+}
+
+.code-example__top-btn {
+  margin-right: 8px;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+}
+
+.code-example__top-btn--red {
+  background-color: #fb574e;
+}
+
+.code-example__top-btn--yellow {
+  background-color: #fbbd2e;
+}
+
+.code-example__top-btn--green {
+  background-color: #51e05d;
+}
+
+.code-example__text {
+  overflow-x: auto;
+  margin-bottom: 20px;
+  font-size: $fontSmaller;
+  line-height: 1.7143;
+  font-family: $font2;
+  font-weight: 500;
+}
+
+.header__description {
+  margin-bottom: 35px;
+  font-size: $fontLarge;
+  line-height: 1.375;
+  font-weight: 400;
+  text-align: center;
+}
+
+.header__btn-download {
+  margin-bottom: 20px;
+  display: block;
+}
+
+.header__download-other-btn {
+  margin-bottom: 20px;
+}

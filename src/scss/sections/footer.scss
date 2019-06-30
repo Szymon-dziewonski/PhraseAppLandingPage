@@ -6,10 +6,10 @@
   position: relative;
   max-width: 160px;
   height: 40px;
-  border: 1px solid $colorDark;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  border: 1px solid $colorBorder;
+  -webkit-border-radius: $borderRadiusMedium;
+  -moz-border-radius: $borderRadiusMedium;
+  border-radius: $borderRadiusMedium;
   margin-bottom: 30px;
 
   &-select {
@@ -37,7 +37,7 @@
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
-    color: $colorDark;
+    color: $colorBorder;
   }
 
   &-arrow {
@@ -60,7 +60,10 @@
 
 .footer__parrot {
   max-width: 30px;
-  margin-bottom: 20px;
+
+  @media all and (max-width: $breakpointMd) {
+    margin-bottom: 20px;
+  }
 }
 
 .footer__termslist {

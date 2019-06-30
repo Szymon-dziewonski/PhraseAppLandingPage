@@ -6,10 +6,10 @@
           <img alt="PhraseApp white logo" class="header-nav__logo col-auto" src="../assets/phraseapp_logo_rgb-c.png">
           <nav class="col-12 col-sm">
             <ul class="row justify-content-end justify-content-lg-start no-gutters">
-              <li class="col-auto"><a class="header-nav__link" href="">Features</a></li>
-              <li class="col-auto"><a class="header-nav__link" href="">Customers</a></li>
-              <li class="col-auto"><a class="header-nav__link" href="">Pricing</a></li>
-              <li class="col-auto"><a class="header-nav__link" href="">Resource</a></li>
+              <li class="col-auto"><a class="header-nav__link" href="" title="Features">Features</a></li>
+              <li class="col-auto"><a class="header-nav__link" href="" title="Customers">Customers</a></li>
+              <li class="col-auto"><a class="header-nav__link" href="" title="Pricing">Pricing</a></li>
+              <li class="col-auto"><a class="header-nav__link" href="" title="Resource">Resource</a></li>
             </ul>
           </nav>
         </div>
@@ -20,8 +20,8 @@
           <li class="col-auto"><a class="header-nav__link" href=""><i class="header-nav__link-icon material-icons">language</i>&nbsp;<span
             class="v-a-middle">English</span></a>
           </li>
-          <li class="col-auto"><a class="header-nav__link" href="">Login</a></li>
-          <li class="col-auto"><a class="btn" href="">Sign Up</a></li>
+          <li class="col-auto"><a class="header-nav__link" href="" title="Login">Login</a></li>
+          <li class="col-auto"><a class="btn" href="" title="Sign Up">Sign Up</a></li>
         </ul>
       </div>
     </div>
@@ -29,48 +29,52 @@
     <article class="row flex-column align-items-center">
       <section class="col">
         <div id="code-example-tabs" class="code-example tab-container">
-        <header class="code-example__header row no-gutters">
-          <div class="col-auto code-example__top-btn code-example__top-btn--red"></div>
-          <div class="col-auto code-example__top-btn code-example__top-btn--yellow"></div>
-          <div class="col-auto code-example__top-btn code-example__top-btn--green"></div>
-        </header>
-        <div class="tab-container__content">
-          <div id="code-example-tab-download" class="tab-container__tabpanel" role="tabpanel" aria-expanded="true">
+          <header class="code-example__header row no-gutters">
+            <div class="col-auto code-example__top-btn code-example__top-btn--red"></div>
+            <div class="col-auto code-example__top-btn code-example__top-btn--yellow"></div>
+            <div class="col-auto code-example__top-btn code-example__top-btn--green"></div>
+          </header>
+          <div class="tab-container__content">
+            <div aria-expanded="true" class="tab-container__tabpanel" id="code-example-tab-download" role="tabpanel">
             <pre class="code-example__text"><code>phraseapp locale download &lt;project_id&gt; &lt;id&gt; \
 --branch my-feature-branch \
 --file-format yml \
 --tags feature1,feature2 \
 --tag feature</code></pre>
-          </div>
-          <div id="code-example-tab-update" class="tab-container__tabpanel" role="tabpanel" aria-expanded="false">
+            </div>
+            <div aria-expanded="false" class="tab-container__tabpanel" id="code-example-tab-update" role="tabpanel">
             <pre class="code-example__text"><code>phraseapp locale update &lt;project_id&gt; &lt;id&gt; \
 --branch my-feature-branch \
 --file-format yml \
 --tags feature1,feature2 \
 --tag feature</code></pre>
-          </div>
-          <div id="code-example-tab-delete" class="tab-container__tabpanel" role="tabpanel" aria-expanded="false">
+            </div>
+            <div aria-expanded="false" class="tab-container__tabpanel" id="code-example-tab-delete" role="tabpanel">
             <pre class="code-example__text"><code>phraseapp locale delete &lt;project_id&gt; &lt;id&gt; \
 --branch my-feature-branch \
 --file-format yml \
 --tags feature1,feature2 \
 --tag feature</code></pre>
+            </div>
           </div>
-        </div>
 
-        <footer>
-          <ul class="tab-container__tablist" role="tablist">
-            <li class="tab-container__tab" role="tab" aria-controls="code-example-tab-download" tabindex="0" aria-selected="true">Download a locale</li>
-            <li class="tab-container__tab" role="tab" aria-controls="code-example-tab-update" tabindex="0" aria-selected="false">Update a project</li>
-            <li class="tab-container__tab" role="tab" aria-controls="code-example-tab-delete" tabindex="0" aria-selected="false">Delete a key</li>
-            <li class="tab-container__tab-placeholder"><a class="tab-container__tab-link no-animation" href="" tabindex="0">More</a></li>
-          </ul>
-        </footer>
+          <footer>
+            <ul class="tab-container__tablist" role="tablist">
+              <li aria-controls="code-example-tab-download" aria-selected="true" class="tab-container__tab" role="tab" tabindex="0">Download a
+                locale
+              </li>
+              <li aria-controls="code-example-tab-update" aria-selected="false" class="tab-container__tab" role="tab" tabindex="0">Update a project
+              </li>
+              <li aria-controls="code-example-tab-delete" aria-selected="false" class="tab-container__tab" role="tab" tabindex="0">Delete a key</li>
+              <li class="tab-container__tab-placeholder"><a class="tab-container__tab-link no-animation" href="" tabindex="0">More</a></li>
+            </ul>
+          </footer>
         </div>
       </section>
 
       <h1 class="col-auto h1">The whole PhraseApp API in your terminal.</h1>
-      <p class="col-auto header__description">The PhraseApp CLI tool lets you navigate your projects and translations quickly from the command line instead of fiddling around
+      <p class="col-auto header__description">The PhraseApp CLI tool lets you navigate your projects and translations quickly from the command line
+        instead of fiddling around
         with long curl requests. Available for Linux, Mac OS X and Windows.</p>
       <div class="col-auto t-center">
         <a class="btn btn-big header__btn-download" href="">Free Download (MacOS&nbsp;X)</a>

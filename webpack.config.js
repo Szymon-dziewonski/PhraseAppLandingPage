@@ -1,14 +1,19 @@
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HtmlWebpackPlugin    = require('html-webpack-plugin');
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const MiniCssExtractPlugin    = require('mini-css-extract-plugin')
+const HtmlWebpackPlugin       = require('html-webpack-plugin')
+const {CleanWebpackPlugin}    = require('clean-webpack-plugin')
+const TerserJSPlugin          = require('terser-webpack-plugin')
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
-const path = require('path');
-const ROOT = path.resolve(__dirname, 'src');
+const path = require('path')
+const ROOT = path.resolve(__dirname, 'src')
 
-module.exports = {
-  context: ROOT,
-  entry  : ['./application.scss', './application.mjs'],
-  module : {
+module.exports = (env, argv) => ({
+  context     : ROOT,
+  entry       : ['./application.scss', './application.mjs'],
+  optimization: {
+    minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})]
+  },
+  module      : {
     rules: [
       {
         test: /\.scss$/,
@@ -37,18 +42,21 @@ module.exports = {
       }
     ]
   },
-  plugins: [
+  plugins     : [
     new MiniCssExtractPlugin({
       filename: 'styles.css'
     }),
     new HtmlWebpackPlugin({
       template: 'index.ejs',
-      hash    : true
+      hash    : true,
+      minify  : argv.mode === 'production'
+                ? { collapseWhitespace: true, sortAttributes: true, sortClassNames: true } // sorting gives better gzipping results
+                : false
     }),
     new CleanWebpackPlugin()
   ],
-  output : {
+  output      : {
     filename: '[name].js',
     path    : path.resolve(__dirname, 'dist')
   }
-}
+})

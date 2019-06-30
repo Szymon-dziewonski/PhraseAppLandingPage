@@ -19,14 +19,14 @@ Then, you can navigate to [http://localhost:8080/](http://localhost:8080/) in yo
 
 ## Notes
 
-###Javascript :
+### Javascript :
 
 - minification html,js,css 
-- minify classNames for css
+- minify classNames for css and html
 - handling of assets with webpack
 - testing with jest
 
-###Styling (scss): 
+### Styling (scss): 
 
 - bootstrap grid only used for flexbox features for faster building (custom breakpoints and column numbers)
 - use of REM font size for responsive control sizes for fonts

@@ -12,14 +12,20 @@
   border-radius: $borderRadiusMedium;
   margin-bottom: 30px;
 
-  &-select {
-    height: 38px;
+  @media all and (max-width: $breakpointSm) {
+    max-width: none;
   }
 
   &-select {
+    font-family: inherit;
+    height: 38px;
     width: 100%;
-    border: none;
+    border: 0;
+    border-radius: 0;
     padding-left: 30px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
   }
 
   &-globe,
@@ -43,12 +49,15 @@
   &-arrow {
     display: flex;
     align-items: center;
-    top: 1px;
-    bottom: 1px;
-    right: 1px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
     padding-right: 10px;
     background-color: $colorLight;
     color: $colorDark;
+    -webkit-border-radius: $borderRadiusMedium;
+    -moz-border-radius: $borderRadiusMedium;
+    border-radius: $borderRadiusMedium;
   }
 }
 
@@ -61,7 +70,7 @@
 .footer__parrot {
   max-width: 30px;
 
-  @media all and (max-width: $breakpointMd) {
+  @media all and (max-width: $breakpointSm) {
     margin-bottom: 20px;
   }
 }

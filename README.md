@@ -13,7 +13,7 @@ Then, you can navigate to [http://localhost:8080/](http://localhost:8080/) in yo
 
 - `yarn build` 
 
-##Testing
+## Testing
 
 - `yarn test`
 
@@ -30,7 +30,11 @@ Then, you can navigate to [http://localhost:8080/](http://localhost:8080/) in yo
 
 - bootstrap grid only used for flexbox features for faster building (custom breakpoints and column numbers)
 - use of REM font size for responsive control sizes for fonts
-- we do not use `ID` selector as they are saved inside window object, so if there is no need to polute `window` it's preferable to use `class` instead of `ID`
+- we try to minimize usage of IDs (there are basically left only where aria tags need them) selector as they are saved inside window object, so if there is no need to polute `window` it's preferable to use `class` instead of `ID`
+
+### TESTING
+
+For better DOM testing (especially for event - connected, E2E and visual regression testing) puppeteer could be used (for better accessibility testing along with axe-core), but due to some amount of time setup of these would take we agreed to not include them in this demo.
 
 ### SEO 
 
